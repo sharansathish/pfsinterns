@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharan Sathish Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        section {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sharan Sathish Blog</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('about')">About Me</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <section id="home" class="content active">
+        <h2>Welcome to My Blog!</h2>
+        <p>Explore my journey through the skies as I dive into the world of FPV and RC planes.</p>
+    </section>
+
+    <section id="about" class="content">
+        <h2>About Me</h2>
+        <p>Embarking on a high-flying adventure into the exhilarating realms of FPV (First Person View) and RC planes! 
+        Fueled by a passion for aviation, I'm strapping in for an adrenaline-packed journey of aerial exploration. 
+        While I'm still on the runway of this thrilling experience, my enthusiasm knows no bounds. 
+        Ready to connect with fellow skyward adventurers, share stories, and embrace the absolute excitement of navigating the skies!</p>
+    </section>
+
+    <section id="contact" class="content">
+        <h2>Contact</h2>
+        <p>Email me at: <a href="mailto:sharan.sathishp@gmail.com">sharan.sathishp@gmail.com</a></p>
+    </section>
+
+    <footer>
+        <p>© 2024 Sharan Sathish</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.content');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            var activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
